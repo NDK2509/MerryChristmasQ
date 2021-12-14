@@ -11,6 +11,9 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <audio autoplay>
+        <source src="sound/bg-sound.mp3">
+    </audio>
     <div class="container-fluid">
         <div class="bg">
             <img src="img/pine-tree2.png" class="img-fluid" alt="" id="pine">
@@ -24,18 +27,16 @@
     </div>
     <!-- Modal -->
     <div class="modal fade" id="modal-start" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" id="btn-close-mStart" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="modal-body text-center">
+                    <p id="mStartText">Hế nhô Q, lại là Kỳ đây. Hy vọng món quà sau sẽ làm Q vui hơn trong mùa Noen này ha.</p>
+                    <img src="img/merry-christmas-image-cute-cat.jpg" class="img-fluid" alt="">
+                    <br><b>*(Quay ngang màn hình điện thoại nha)</b>
                 </div>
             </div>
         </div>
@@ -48,7 +49,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-snower" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
