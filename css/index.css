@@ -96,4 +96,8 @@
 		font-family: "Pacifico", cursive;
 		font-size: 3rem;
 	}
+	#start-img {
+		width: auto;
+		height: auto;
+	}
 }
