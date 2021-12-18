@@ -17,7 +17,7 @@ var sound = new Howl({
 	src: ['sound/bg-sound.mp3'],
 	autoplay: true,
 	loop: true,
-	volume: 0.2
+	volume: 0.5
 });
 var soundBell = new Howl({
 	src: ["sound/bellsound.mp3"],
