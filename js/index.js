@@ -13,12 +13,12 @@ document.getElementById("gift2").addEventListener(CLICK_EVENT, () => {
 document.getElementById("snower").addEventListener(CLICK_EVENT, () => {
 	modalSnower.show();
 });
-//var sound = new Howl({
-//	src: ['sound/bg-sound.mp3'],
-//	autoplay: true,
-////loop: true,
-//	volume: 0.3
-//});
+var sound = new Howl({
+	src: ['sound/bg-sound.mp3'],
+	autoplay: true,
+	loop: true,
+	volume: 0.2
+});
 var soundBell = new Howl({
 	src: ["sound/bellsound.mp3"],
 });
