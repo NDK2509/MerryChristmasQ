@@ -46,6 +46,7 @@ const pianoSound = new Howl({
 const modalStart = new bootstrap.Modal($("modal-start"));
 const modalGift = new bootstrap.Modal($("modal-gift"));
 const modalSnower = new bootstrap.Modal($("modal-snower"));
+const modalEnd = new bootstrap.Modal($('modal-end'));
 
 $('btn-close-mStart').addEventListener(CLICK_EVENT, () => {
 	bgSound.play()
@@ -65,6 +66,12 @@ $("meow").addEventListener(CLICK_EVENT, async () => {
 	await meowSound.play();
 	await meowPurrSound.play();
 });
-
+$('cat-running').addEventListener(CLICK_EVENT, () => {
+	modalEnd.show();
+})
+setTimeout(() => {
+	$("cat-running").style.display = "block";
+	$("cat-running").style.animation = "run 20s infinite";
+}, 10000);
 screen.orientation.lock('landscape')
 modalStart.show();
