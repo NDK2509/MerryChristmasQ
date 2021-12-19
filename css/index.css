@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+.modal-open {
+	padding: 0 !important;
+}
 #bg {
 	height: 100vh;
 	width: 100vw;
@@ -64,6 +68,24 @@
 		opacity: 1;
 	}
 }
+#cat-running {
+	position: absolute;
+	width: 18vw;
+	bottom: 2vh;
+	left: 0;
+	display: none;
+	z-index: 3;
+	/*animation: run 20s infinite;*/
+}
+@keyframes run {
+	0%,
+	100% {
+		transform: translateX(-100vw);
+	}
+	50% {
+		transform: translateX(98vw);
+	}
+}
 #snower {
 	position: absolute;
 	height: 60vh;
@@ -94,8 +116,12 @@
 	font-family: "Pacifico", cursive;
 	font-size: 2rem;
 }
+#bye {
+	font-family: "Pacifico", cursive;
+	font-size: 2.2rem;
+}
 @media only screen and (min-width: 800px) {
-	#mStart-text {
+	#mStart-text, #bye {
 		font-family: "Pacifico", cursive;
 		font-size: 3rem;
 	}
