@@ -15,17 +15,10 @@
 #pine {
 	position: absolute;
 	height: 90vh;
+	width: 35vw;
 	left: 32vw;
 	bottom: 1vh;
 	z-index: 0;
-}
-#star {
-	position: absolute;
-	height: 10vh;
-	top: 4vh;
-	left: 44.4vw;
-	z-index: 11;
-	filter: brightness(4);
 }
 #bell {
 	position: absolute;
