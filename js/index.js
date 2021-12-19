@@ -1,33 +1,43 @@
+const $ = (id) => {
+	return document.getElementById(id);
+};
+
 const CLICK_EVENT = "click";
-
-const modalStart = new bootstrap.Modal(document.getElementById("modal-start"));
-modalStart.show();
-const modalGift = new bootstrap.Modal(document.getElementById("modal-gift"));
-const modalSnower = new bootstrap.Modal(
-	document.getElementById("modal-snower")
-);
-
-document.getElementById("gift2").addEventListener(CLICK_EVENT, () => {
-	modalGift.show();
+const bgSound = new Howl({
+	src: ["sound/bg-sound.mp3"],
+	volume: 0.5,
 });
-document.getElementById("snower").addEventListener(CLICK_EVENT, () => {
-	modalSnower.show();
+const meowPurrSound = new Howl({
+	src: ["sound/meowpurrsound.mp3"],
 });
-var sound = new Howl({
-	src: ['sound/bg-sound.mp3'],
-	autoplay: true,
-	loop: true,
-	volume: 0.5
-});
-var soundBell = new Howl({
+const soundBell = new Howl({
 	src: ["sound/bellsound.mp3"],
 });
-var meowSound = new Howl({
+const meowSound = new Howl({
 	src: ["sound/meowsound.mp3"],
 });
-document.getElementById("bell").addEventListener(CLICK_EVENT, () => {
+
+const modalStart = new bootstrap.Modal($("modal-start"));
+const modalGift = new bootstrap.Modal($("modal-gift"));
+const modalSnower = new bootstrap.Modal($("modal-snower"));
+
+$('btn-close-mStart').addEventListener(CLICK_EVENT, () => {
+	bgSound.play()
+})
+$("gift2").addEventListener(CLICK_EVENT, () => {
+	modalGift.show();
+});
+$("snower").addEventListener(CLICK_EVENT, () => {
+	modalSnower.show();
+});
+
+$("bell").addEventListener(CLICK_EVENT, () => {
 	soundBell.play();
 });
-document.getElementById("meow").addEventListener(CLICK_EVENT, () => {
-	meowSound.play();
+$("meow").addEventListener(CLICK_EVENT, async () => {
+	await meowSound.play();
+	await meowPurrSound.play();
 });
+
+screen.orientation.lock('landscape')
+modalStart.show();
