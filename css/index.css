@@ -10,6 +10,7 @@
 	width: 20vw;
 	right: 15vw;
 	bottom: 3vh;
+	cursor: pointer;
 }
 #pine {
 	position: absolute;
@@ -30,6 +31,7 @@
 	position: absolute;
 	height: 30vh;
 	left: 10vw;
+	cursor: pointer;
 	animation: bellAni 2s infinite;
 }
 @keyframes bellAni {
@@ -91,10 +93,11 @@
 	width: auto;
 	height: 120px;
 }
-#snowflakes{
+#snowflakes {
 	position: absolute;
+	z-index: 1000;
 }
-#snower-text{
+#snower-text {
 	font-family: "Pacifico", cursive;
 	font-size: 2rem;
 }
