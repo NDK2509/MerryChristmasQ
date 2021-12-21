@@ -51,8 +51,8 @@ const modalEnd = new bootstrap.Modal($('modal-end'));
 $('btn-close-mStart').addEventListener(CLICK_EVENT, () => {
 	bgSound.play();
 	setTimeout(() => {
-	$("cat-running").style.display = "block";
-	$("cat-running").style.animation = "run 20s infinite";
+		$("cat-running").style.display = "block";
+		$("cat-running").style.animation = "run 20s infinite";
 	}, 15000);
 })
 $("gift2").addEventListener(CLICK_EVENT, () => {
