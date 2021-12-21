@@ -49,7 +49,11 @@ const modalSnower = new bootstrap.Modal($("modal-snower"));
 const modalEnd = new bootstrap.Modal($('modal-end'));
 
 $('btn-close-mStart').addEventListener(CLICK_EVENT, () => {
-	bgSound.play()
+	bgSound.play();
+	setTimeout(() => {
+	$("cat-running").style.display = "block";
+	$("cat-running").style.animation = "run 20s infinite";
+	}, 15000);
 })
 $("gift2").addEventListener(CLICK_EVENT, () => {
 	modalGift.show();
@@ -69,9 +73,5 @@ $("meow").addEventListener(CLICK_EVENT, async () => {
 $('cat-running').addEventListener(CLICK_EVENT, () => {
 	modalEnd.show();
 })
-setTimeout(() => {
-	$("cat-running").style.display = "block";
-	$("cat-running").style.animation = "run 20s infinite";
-}, 10000);
 screen.orientation.lock('landscape')
 modalStart.show();
